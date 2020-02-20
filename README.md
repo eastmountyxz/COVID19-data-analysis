@@ -5,7 +5,7 @@
 [[Pyhon疫情大数据分析] 一.腾讯实时数据爬取、Matplotlib和Seaborn可视化分析全国各地区、某省各城市、新增趋势](https://blog.csdn.net/Eastmount/article/details/104298388) <br />
 
 <div align="center">
-   <img src="https://img-blog.csdnimg.cn/20200217191936456.png" width="60%" height="60" />
+   <img src="https://img-blog.csdnimg.cn/20200217191936456.png" width="60%" height="60%" />
 </div>
 
 
