@@ -26,6 +26,9 @@ By：Eastmount CSDN YXZ
 </div>
 
 
+[[Pyhon疫情大数据分析] 三.新闻信息抓取及词云可视化、文本聚类和LDA主题模型文本挖掘](https://blog.csdn.net/Eastmount/article/details/104698926) <br />
+
+
 
 [[Pyhon疫情大数据分析] 四.微博话题抓取及新冠肺炎疫情文本挖掘和情感分析](https://blog.csdn.net/Eastmount/article/details/104995419) <br />
 
