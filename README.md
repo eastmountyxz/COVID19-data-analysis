@@ -29,7 +29,9 @@ By：Eastmount CSDN YXZ
 
 [[Pyhon疫情大数据分析] 四.微博话题抓取及新冠肺炎疫情文本挖掘和情感分析](https://blog.csdn.net/Eastmount/article/details/104995419) <br />
 
-
+<div align="center">
+   <img src="https://img-blog.csdnimg.cn/20200321143724497.png" width="60%" height="60%" />
+</div>
 
 ---
 
