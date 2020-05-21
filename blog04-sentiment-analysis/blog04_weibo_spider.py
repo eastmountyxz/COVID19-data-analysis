@@ -166,6 +166,7 @@ def main():
     count_title = len(comments_ID)
     for count, comment_ID in enumerate(comments_ID):
         print ("正在爬取第%s个话题，一共找到个%s话题需要爬取"%(count+1, count_title))
+        time.sleep(random.randint(1000,2000)/1000.0)
         #maxPage获取返回的最大评论数量
         maxPage = spider_title(comment_ID)
         print ('maxPage = ', maxPage)
