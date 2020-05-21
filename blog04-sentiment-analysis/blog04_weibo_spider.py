@@ -74,9 +74,13 @@ def spider_title(comment_ID):
             title_created_YMD = "{}/{}/{}".format(created_title_time[-1], '02', created_title_time[2])
         elif 'Jan' in created_title_time:
             title_created_YMD = "{}/{}/{}".format(created_title_time[-1], '01', created_title_time[2])
+        elif 'Apr' in created_title_time:
+            title_created_YMD = "{}/{}/{}".format(created_title_time[-1], '04', created_title_time[2])
+        elif 'May' in created_title_time:
+            title_created_YMD = "{}/{}/{}".format(created_title_time[-1], '05', created_title_time[2])
         else:
-            print ('该时间不在疫情范围内，估计数据有误！URL = ')
-            pass
+            title_created_YMD = "{}/{}/{}".format(created_title_time[-1], '00', created_title_time[2])
+        
         print ("title_created_YMD = ", title_created_YMD)
         #发布时间
         add_title_time = created_title_time[3]
@@ -142,9 +146,14 @@ def write_csv(jsondata):
             created_YMD = "{}/{}/{}".format(created_times[-1], '02', created_times[2])
         elif 'Jan' in created_times:
             created_YMD = "{}/{}/{}".format(created_times[-1], '01', created_times[2])
+        elif 'Mar' in created_times:
+            created_YMD = "{}/{}/{}".format(created_times[-1], '03', created_times[2])
+        elif 'Apr' in created_times:
+            created_YMD = "{}/{}/{}".format(created_times[-1], '04', created_times[2])
+        elif 'May' in created_times:
+            created_YMD = "{}/{}/{}".format(created_times[-1], '05', created_times[2])
         else:
-            print ('该时间不在疫情范围内，估计数据有误！')
-            pass
+            created_YMD = "{}/{}/{}".format(created_times[-1], '00', created_times[2])
         created_time = created_times[3] #评论时间时分秒
         #if len(comment_text) != 0:
         position2 = (" ", " ", " ", " "," ", " ", " ", " ", " ", " ", user_id, user_name, user_gender, created_YMD, created_time, comment_text)

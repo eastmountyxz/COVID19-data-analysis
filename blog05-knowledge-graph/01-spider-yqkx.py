@@ -40,6 +40,7 @@ print("\n\n==========================================================")
 #-------------------------------------------------获取正文-------------------------------------------------
 def get_content(url):
     print(url)
+    time.sleep(random.randint(1000,3000)/1000.0)
     try:
         content = urllib.request.urlopen(url).read()
         soup = BeautifulSoup(content,"html.parser")
