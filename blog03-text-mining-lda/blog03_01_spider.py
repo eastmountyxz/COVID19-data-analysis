@@ -1,17 +1,22 @@
 import requests,re, csv, sys, time
 from lxml import html
+import random
 from fake_useragent import UserAgent
 
 # 记录起始时间
 startTime = time.time()
 
 # 创建CSV文件，并写入表头信息
-fp = open('中国社会组织_疫情防控.csv','a',newline='',encoding='utf-8-sig')
+fp = open('中国社会组织_疫情防控.csv','w',newline='',encoding='utf-8-sig')
 writer = csv.writer(fp)
 writer.writerow(("标题", "时间", "URL", "正文内容", "来源"))
+fp.close()
 
 #----------------------------------------------抓取数据----------------------------------------------
 def spider_html_info(url):
+    time.sleep(random.randint(1000,2000)/1000.0)
+    fp = open('中国社会组织_疫情防控.csv','a',newline='',encoding='utf-8-sig')
+    writer = csv.writer(fp)
     try:
         headers = {
             "User-Agent" : UserAgent().chrome #chrome浏览器随机代理
@@ -46,6 +51,7 @@ def spider_html_info(url):
         # print ("source = ", source)
         writer.writerow((title, publish_time, url, article_text, source))
     except:
+        print("Error: url not found")
         pass
     
     if url == 'http://www.chinanpo.gov.cn/1944/123496/index.html':
@@ -57,11 +63,12 @@ def spider_html_info(url):
         # 正常退出程序
         sys.exit(0)       
     else:
+        fp.close()
         return next_url
 
 #----------------------------------------------主函数----------------------------------------------
 def main():
-    url = "http://www.chinanpo.gov.cn/1944/125177/nextindex.html" # 125177第一篇文章
+    url = "http://www.chinanpo.gov.cn/1944/126124/nextindex.html" # 125177第一篇文章
     count = 1
     while True:
         print ("正在爬取第%s篇："%count, url)
